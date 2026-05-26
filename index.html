@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI Automation Agency</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial, Helvetica, sans-serif;
+    }
+
+    body{
+      background:#0f172a;
+      color:white;
+      line-height:1.6;
+    }
+
+    a{
+      text-decoration:none;
+      color:white;
+    }
+
+    .container{
+      width:90%;
+      max-width:1200px;
+      margin:auto;
+    }
+
+    /* NAVBAR */
+
+    nav{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:20px 0;
+    }
+
+    .logo{
+      font-size:1.5rem;
+      font-weight:bold;
+      color:#38bdf8;
+    }
+
+    .nav-links{
+      display:flex;
+      gap:20px;
+    }
+
+    .btn{
+      background:#38bdf8;
+      color:#000;
+      padding:12px 22px;
+      border-radius:10px;
+      font-weight:bold;
+      transition:0.3s;
+      display:inline-block;
+    }
+
+    .btn:hover{
+      transform:translateY(-3px);
+      background:white;
+    }
+
+    /* HERO */
+
+    .hero{
+      min-height:90vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:60px 0;
+    }
+
+    .hero-content{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:50px;
+      align-items:center;
+    }
+
+    .hero-text h1{
+      font-size:3.5rem;
+      line-height:1.1;
+      margin-bottom:20px;
+    }
+
+    .hero-text span{
+      color:#38bdf8;
+    }
+
+    .hero-text p{
+      color:#cbd5e1;
+      margin-bottom:30px;
+      font-size:1.1rem;
+    }
+
+    .hero-image{
+      display:flex;
+      justify-content:center;
+    }
+
+    .card{
+      width:100%;
+      max-width:450px;
+      background:#1e293b;
+      padding:30px;
+      border-radius:20px;
+      box-shadow:0 10px 40px rgba(0,0,0,0.4);
+    }
+
+    .card h3{
+      margin-bottom:20px;
+      color:#38bdf8;
+    }
+
+    .automation-box{
+      background:#0f172a;
+      padding:15px;
+      border-radius:12px;
+      margin-bottom:15px;
+      border:1px solid #334155;
+    }
+
+    /* SERVICES */
+
+    .services{
+      padding:80px 0;
+    }
+
+    .section-title{
+      text-align:center;
+      margin-bottom:50px;
+    }
+
+    .section-title h2{
+      font-size:2.5rem;
+      margin-bottom:10px;
+    }
+
+    .service-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:25px;
+    }
+
+    .service-card{
+      background:#1e293b;
+      padding:30px;
+      border-radius:18px;
+      transition:0.3s;
+    }
+
+    .service-card:hover{
+      transform:translateY(-10px);
+    }
+
+    .service-card h3{
+      margin:15px 0;
+      color:#38bdf8;
+    }
+
+    /* TESTIMONIAL */
+
+    .testimonial{
+      padding:80px 0;
+    }
+
+    .testimonial-box{
+      background:#1e293b;
+      padding:40px;
+      border-radius:20px;
+      text-align:center;
+      max-width:800px;
+      margin:auto;
+    }
+
+    .testimonial-box p{
+      font-size:1.2rem;
+      color:#cbd5e1;
+      margin-bottom:20px;
+    }
+
+    /* CTA */
+
+    .cta{
+      padding:80px 0;
+      text-align:center;
+    }
+
+    .cta h2{
+      font-size:2.8rem;
+      margin-bottom:20px;
+    }
+
+    .cta p{
+      color:#cbd5e1;
+      margin-bottom:30px;
+    }
+
+    footer{
+      padding:30px 0;
+      text-align:center;
+      border-top:1px solid #1e293b;
+      color:#94a3b8;
+    }
+
+    /* RESPONSIVE */
+
+    @media(max-width:900px){
+
+      .hero-content{
+        grid-template-columns:1fr;
+      }
+
+      .hero-text{
+        text-align:center;
+      }
+
+      .hero-text h1{
+        font-size:2.8rem;
+      }
+
+      .service-grid{
+        grid-template-columns:1fr;
+      }
+
+      .nav-links{
+        display:none;
+      }
+    }
+
+    @media(max-width:500px){
+
+      .hero-text h1{
+        font-size:2.2rem;
+      }
+
+      .section-title h2,
+      .cta h2{
+        font-size:2rem;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+
+  <div class="container">
+    <nav>
+      <div class="logo">AIFlow</div>
+
+      <div class="nav-links">
+        <a href="#">Home</a>
+        <a href="#">Services</a>
+        <a href="#">Results</a>
+        <a href="#">Contact</a>
+      </div>
+
+      <a href="#" class="btn">Book Call</a>
+    </nav>
+  </div>
+
+  <!-- HERO -->
+
+  <section class="hero">
+    <div class="container hero-content">
+
+      <div class="hero-text">
+        <h1>I Build <span>AI Automations</span> That Save Businesses Time</h1>
+
+        <p>
+          I help businesses automate emails, customer support, lead generation,
+          and repetitive tasks using AI tools like n8n and GPT.
+        </p>
+
+        <a href="#" class="btn">Get Started</a>
+      </div>
+
+      <div class="hero-image">
+
+        <div class="card">
+          <h3>Automation Workflows</h3>
+
+          <div class="automation-box">
+            📩 AI Email Responder
+          </div>
+
+          <div class="automation-box">
+            🤖 Customer Support Bot
+          </div>
+
+          <div class="automation-box">
+            ⚡ Lead Capture Automation
+          </div>
+
+          <div class="automation-box">
+            📊 CRM Workflow Integration
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+
+  <section class="services">
+
+    <div class="container">
+
+      <div class="section-title">
+        <h2>What I Can Do</h2>
+        <p>Automation services for modern businesses</p>
+      </div>
+
+      <div class="service-grid">
+
+        <div class="service-card">
+          <h3>Email Automation</h3>
+          <p>
+            Automatically reply to customers and manage inboxes using AI.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <h3>Lead Generation</h3>
+          <p>
+            Capture and organize leads without manual work.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <h3>AI Workflows</h3>
+          <p>
+            Build smart workflows using n8n, APIs, and AI tools.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- TESTIMONIAL -->
+
+  <section class="testimonial">
+
+    <div class="container">
+
+      <div class="testimonial-box">
+        <p>
+          “Our business saved hours every week after automating customer emails.”
+        </p>
+
+        <h4>- Happy Client</h4>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- CTA -->
+
+  <section class="cta">
+
+    <div class="container">
+
+      <h2>Want To Automate Your Business?</h2>
+
+      <p>
+        Let’s build AI systems that save time and increase revenue.
+      </p>
+
+      <a href="#" class="btn">Contact Me</a>
+
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+
+  <footer>
+    <div class="container">
+      <p>© 2026 AIFlow. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
